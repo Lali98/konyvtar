@@ -1,0 +1,122 @@
+header span, header h1{
+    display: inline;
+}
+
+button{
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: 1px solid #c0c0c0;
+    border-radius: 25px 0;
+}
+
+header{
+    padding: 5px;
+    background-color: #dcdcdc;
+    border: 1px solid #f5f5f5;
+}
+
+table tr, table th, table td{
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+table{
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th{
+    background-color: #c8c8c8;
+}
+
+table tr:nth-child(2n+1){
+    background-color: #faebd7;
+}
+
+.fun a img{
+    width: 20px;
+}
+
+.fun{
+    text-align: center;
+}
+
+.from-panel{
+    margin: auto;
+    float: none;
+}
+
+/* Style the form - display items horizontally */
+#from-inside {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 40px;
+}
+  
+  /* Add some margins for each label */
+#from-inside label {
+    margin: 5px 10px 5px 0;
+}
+  
+  /* Style the input fields */
+#from-inside input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+  
+  /* Style the submit button */
+#from-inside button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+}
+  
+#from-inside button:hover {
+    background-color: royalblue;
+}
+
+select{
+    height: 35px;
+    border-color: #dcdcdc;
+}
+
+.checkbox-group{
+    margin: 20px 0 20px 10px;
+}
+
+textarea{
+    border-color: #dcdcdc;
+    height: 100px;
+    margin: 20px 0;
+}
+
+main{
+    overflow-y: auto;
+    height: 700px;
+}
+
+.btn{
+    text-align: right;
+}
+  
+  /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 768px) {
+    #from-inside input {
+      margin: 10px 0;
+    }
+  
+    #from-inside {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .p-t-s-10{
+        padding-top: 10px;
+    }
+}

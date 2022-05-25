@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/res.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Könyvtár Program</h1>
+        <span class="fr">
+            <a href="../index.php">
+                <img src="../img/logout.png" alt="kilépés" title="Kilépés">
+            </a>
+        </span>
+    </header>
+
+    <main>
+        <div class="col-12">
+            <div class="col-6">
+                <h2>Szerzők listája</h2>
+                <button type="button">Új szerző</button>
+                <table>
+                    <tr>
+                        <th>Név</th>
+                        <th>Funkciók</th>
+                    </tr>
+                    <tr>
+                        <td>J.R.R Tolkien</td>
+                        <td class="fun">
+                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rhonda Brain</td>
+                        <td class="fun">
+                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-6">
+                <h2>Kategóriák listája</h2>
+                <button type="button">Új kategória</button>
+                <table>
+                    <tr>
+                        <th>Név</th>
+                        <th>Funkciók</th>
+                    </tr>
+                    <tr>
+                        <td>Fantasy</td>
+                        <td class="fun">
+                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Modivációs</td>
+                        <td class="fun">
+                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Regény</td>
+                        <td class="fun">
+                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-12">
+            <h2>Könyvek listája</h2>
+            <button type="button" onclick='location.href="konyvek_form.html"'>Új könyv</button>
+            <table>
+                <tr>
+                    <th>Cim</th>
+                    <th>Oldalszám</th>
+                    <th>Nyelv</th>
+                    <th>Szerző</th>
+                    <th>Kategoria</th>
+                    <th>Funkciók</th>
+                </tr>
+                <tr>
+                    <td>A Gyürük Ura</td>
+                    <td>1800</td>
+                    <td>angol</td>
+                    <td>J.R.R Tolkien</td>
+                    <td>Fantasy, Regény</td>
+                    <td class="fun">
+                        <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                        <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>A Titiok</td>
+                    <td>203</td>
+                    <td>magyar</td>
+                    <td>Rhonda Brain</td>
+                    <td>Motivációs</td>
+                    <td class="fun">
+                        <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                        <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
