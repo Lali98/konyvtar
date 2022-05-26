@@ -55,6 +55,18 @@ class Application
     {
 
     }
+
+    protected function isValidId($id): bool
+    {
+        if (is_int($id) && $id > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 
 

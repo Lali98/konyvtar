@@ -36,7 +36,7 @@ $categories = new Categories();
                 <?php
                     foreach ($categories->getCategories() as $key=>$category)
                     {?>
-                        <input type="checkbox" name="<?= $category['name'] ?>" id="<?= $category['name'] ?>" data-szoveg="<?= $category['name'] ?>"><label for="<?= $category['name'] ?>" id="<?= $category['name'].'_lbl' ?>"><?= $category['name'] ?></label><br>
+                        <input type="checkbox" name="<?= $category['name'] ?>" id="<?= $category['name'] ?>" data-szoveg="<?= $category['name'] ?>"><label onclick="location.href = 'kategoria.php?cat=<?= $category['id'] ?>'" for="<?= $category['name'] ?>" id="<?= $category['name'].'_lbl' ?>"><?= $category['name'] ?></label><br>
                 <?php
                     }
                 ?>
