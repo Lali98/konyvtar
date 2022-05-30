@@ -4,6 +4,8 @@ include_once('php/Categories.php');
 
 $books = new Books();
 $categories = new Categories();
+
+$books->writeLog('az első bejegyzésünk');
 ?>
 
 <!DOCTYPE html>

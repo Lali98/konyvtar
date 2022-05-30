@@ -1,3 +1,11 @@
+<?php
+include_once('../php/Books.php');
+include_once('../php/Categories.php');
+
+$books = new Books();
+$categories = new Categories();
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -7,6 +15,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/res.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/admin_script.js"></script>
 </head>
 <body>
     <header>
@@ -88,28 +98,24 @@
                     <th>Kategoria</th>
                     <th>Funkciók</th>
                 </tr>
+                <?php
+                foreach ($books->getBooks() as $key=>$book)
+                {
+                ?>
                 <tr>
-                    <td>A Gyürük Ura</td>
-                    <td>1800</td>
-                    <td>angol</td>
-                    <td>J.R.R Tolkien</td>
-                    <td>Fantasy, Regény</td>
+                    <td><?= $book['title'] ?></td>
+                    <td><?= $book['page_size'] ?></td>
+                    <td><?= $book['lang'] ?></td>
+                    <td><?= $book['author'] ?></td>
+                    <td><?= $book['category'] ?></td>
                     <td class="fun">
-                        <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                        <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                        <a href="konyvek_form.php?book=<?= $book['id'] ?>"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                        <a href="#" class="delete_rec"><img src="../img/delete.png" alt="töles" title="töles"></a>
                     </td>
                 </tr>
-                <tr>
-                    <td>A Titiok</td>
-                    <td>203</td>
-                    <td>magyar</td>
-                    <td>Rhonda Brain</td>
-                    <td>Motivációs</td>
-                    <td class="fun">
-                        <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                        <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
-                    </td>
-                </tr>
+                <?php
+                }
+                ?>
             </table>
         </div>
     </main>

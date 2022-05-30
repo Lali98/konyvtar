@@ -65,9 +65,17 @@ class Application
         }
     }
 
-    protected function writeLog($str, $sql)
+    public function writeLog($str, $sql = null)
     {
+        $logStr = $str;
+        if ($sql !== null)
+        {
+            $logStr .= '-- SQL QUERY: '.$sql;
+        }
 
+        $log = fopen('log/log.txt', 'a');
+        fwrite($log, $logStr);
+        fclose($log);
     }
 
     protected function isValidId($id): bool
