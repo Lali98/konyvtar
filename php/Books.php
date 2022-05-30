@@ -47,4 +47,14 @@ class Books extends Application
         $books = $this->getSingleResult(strtr($this->sql['bookById'], $params));
         return $books;
     }
+
+    public function delete($id)
+    {
+        if (!$this->isValidId($id))
+        {
+            return false;
+        }
+        $res = $this->deleteRecordById("books", $id);
+        return $res;
+    }
 }

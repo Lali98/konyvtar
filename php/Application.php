@@ -89,6 +89,11 @@ class Application
             return false;
         }
     }
+
+    protected function deleteRecordById($table, $id)
+    {
+        return $this->connection->query("delete form $table where id = $id");
+    }
 }
 
 

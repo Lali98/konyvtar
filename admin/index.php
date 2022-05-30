@@ -110,7 +110,7 @@ $categories = new Categories();
                     <td><?= $book['category'] ?></td>
                     <td class="fun">
                         <a href="konyvek_form.php?book=<?= $book['id'] ?>"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                        <a href="#" class="delete_rec"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                        <a href="#" class="delete_rec" table="books" rec_id="<?= $book['id'] ?>"><img src="../img/delete.png" alt="töles" title="töles"></a>
                     </td>
                 </tr>
                 <?php
