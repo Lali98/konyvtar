@@ -51,6 +51,20 @@ class Application
         return $resultList;
     }
 
+    protected function getSingleResult($sql)
+    {
+        $resultList = $this->getResultList($sql);
+        if (!$resultList)
+        {
+            $this->writeLog('Nem talált értéket a lekérdezés', $sql);
+            return array();
+        }
+        else
+        {
+            return $resultList[0];
+        }
+    }
+
     protected function writeLog($str, $sql)
     {
 

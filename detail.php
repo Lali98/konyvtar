@@ -1,3 +1,11 @@
+<?php
+include_once('php/Books.php');
+
+$books = new Books();
+
+$book = $books->getBookId(intval($_GET['book']));
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -14,27 +22,27 @@
         <h2>Részletes nézet</h2>
     </header>
     <main>
-        <h2>A Gyűrűk Ura</h2>
+        <h2><?= $book['title'] ?></h2>
         <div class="col-4">
-            <img id="konyv" src="img/a-gyuruk-ura-1-a-gyuru-szovetsege-borito.jpg" alt="A Gyűrűk Ura" title="A Gyűrűk Ura">
+            <img id="konyv" src="" alt="<?= $book['title'] ?>" title="<?= $book['title'] ?>">
         </div>
         <div class="col-8">
             <table id="t">
                 <tr>
                     <th>Szerző:</th>
-                    <td>J.R.R Tolkien</td>
+                    <td><?= $book['author'] ?></td>
                 </tr>
                 <tr>
                     <th>Oldalszám:</th>
-                    <td>1800</td>
+                    <td><?= $book['page_size'] ?></td>
                 </tr>
                 <tr>
                     <th>Nyelv:</th>
-                    <td>magyar</td>
+                    <td><?= $book['lang'] ?></td>
                 </tr>
                 <tr>
                     <th>Kategóriak:</th>
-                    <td>Fantasy, Regény</td>
+                    <td><?= $book['category'] ?></td>
                 </tr>
             </table>
             <h5>Leirás:</h5>
