@@ -14,7 +14,7 @@ switch ($_GET['t'])
         }
 
         break;
-    case 'author':
+    case 'authors':
         $author = new Author();
 
         $res = $author->delete(intval($_GET['id']));

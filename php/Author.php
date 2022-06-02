@@ -23,6 +23,6 @@ class Author extends Application
         {
             return false;
         }
-        return $this->deleteRecordById("books", $id);
+        return $this->deleteRecordById("authors", $id);
     }
 }

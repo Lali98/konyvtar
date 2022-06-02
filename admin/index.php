@@ -48,7 +48,7 @@ $author = new Author();
                         <td><?= $item['name'] ?></td>
                         <td class="fun">
                             <a href="konyvek_form.php?author=<?= $item['id'] ?>"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                            <a href="#" class="delete_rec" table="author" rec_id="<?= $item['id'] ?>"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                            <a href="#" class="delete_rec" table="authors" rec_id="<?= $item['id'] ?>"><img src="../img/delete.png" alt="töles" title="töles"></a>
                         </td>
                     </tr>
                     <?php
