@@ -12,7 +12,7 @@ class Categories extends Application
         parent::__construct();
     }
 
-    public function getCategories()
+    public function getCategories(): array
     {
         return $this->getResultList($this->sql['allCategories']);
     }

@@ -1,9 +1,11 @@
 <?php
 include_once('../php/Books.php');
 include_once('../php/Categories.php');
+include_once('../php/Author.php');
 
 $books = new Books();
 $categories = new Categories();
+$author = new Author();
 ?>
 
 <!DOCTYPE html>
@@ -38,20 +40,20 @@ $categories = new Categories();
                         <th>Név</th>
                         <th>Funkciók</th>
                     </tr>
+                    <?php
+                    foreach ($author->getAuthor() as $key=>$item)
+                    {
+                    ?>
                     <tr>
-                        <td>J.R.R Tolkien</td>
+                        <td><?= $item['name'] ?></td>
                         <td class="fun">
-                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                            <a href="konyvek_form.php?author=<?= $item['id'] ?>"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                            <a href="#" class="delete_rec" table="author" rec_id="<?= $item['id'] ?>"><img src="../img/delete.png" alt="töles" title="töles"></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Rhonda Brain</td>
-                        <td class="fun">
-                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
-                        </td>
-                    </tr>
+                    <?php
+                    }
+                    ?>
                 </table>
             </div>
             <div class="col-6">
@@ -62,27 +64,20 @@ $categories = new Categories();
                         <th>Név</th>
                         <th>Funkciók</th>
                     </tr>
+                    <?php
+                    foreach ($categories->getCategories() as $key=>$item)
+                    {
+                    ?>
                     <tr>
-                        <td>Fantasy</td>
+                        <td><?= $item['name'] ?></td>
                         <td class="fun">
-                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                            <a href="konyvek_form.php?category=<?= $item['id'] ?>"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                            <a href="#" class="delete_rec" table="author" rec_id="<?= $item['id'] ?>"><img src="../img/delete.png" alt="töles" title="töles"></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Modivációs</td>
-                        <td class="fun">
-                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Regény</td>
-                        <td class="fun">
-                            <a href="#"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                            <a href="#"><img src="../img/delete.png" alt="töles" title="töles"></a>
-                        </td>
-                    </tr>
+                    <?php
+                    }
+                    ?>
                 </table>
             </div>
         </div>

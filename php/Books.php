@@ -54,7 +54,6 @@ class Books extends Application
         {
             return false;
         }
-        $res = $this->deleteRecordById("books", $id);
-        return $res;
+        return $this->deleteRecordById("books", $id);
     }
 }

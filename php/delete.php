@@ -1,5 +1,6 @@
 <?php
 include_once('Books.php');
+include_once('Author.php');
 
 switch ($_GET['t'])
 {
@@ -12,6 +13,16 @@ switch ($_GET['t'])
             echo 'Hiba';
         }
 
+        break;
+    case 'author':
+        $author = new Author();
+
+        $res = $author->delete(intval($_GET['id']));
+
+        if (!$res)
+        {
+            echo 'Hiba';
+        }
         break;
 
     default:
