@@ -71,8 +71,8 @@ $author = new Author();
                     <tr>
                         <td><?= $item['name'] ?></td>
                         <td class="fun">
-                            <a href="konyvek_form.php?category=<?= $item['id'] ?>"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
-                            <a href="#" class="delete_rec" table="author" rec_id="<?= $item['id'] ?>"><img src="../img/delete.png" alt="töles" title="töles"></a>
+                            <a href="kategoria_form.php?category=<?= $item['id'] ?>"><img src="../img/edit.png" alt="modositas" title="modositas"></a>
+                            <a href="#" class="delete_rec" table="categories" rec_id="<?= $item['id'] ?>"><img src="../img/delete.png" alt="töles" title="töles"></a>
                         </td>
                     </tr>
                     <?php
